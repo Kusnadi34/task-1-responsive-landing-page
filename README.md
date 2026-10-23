@@ -3,7 +3,7 @@
 A modern, fully responsive landing page for a fictional smart coffee maker product called **NovaBrew**. This project was built as part of the Frontend Developer Internship program at Auspify Technologies.
 
 ## 🚀 Live Demo
-*(Live Demo ((https://kusnadi34.github.io/task-1-responsive-landing-page/)))* 
+*([Live Demo] ((https://kusnadi34.github.io/task-1-responsive-landing-page/)))* 
 
 ## ✨ Features
 
