@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NovaBrew - Smart Coffee Maker</title>
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--Header & Navigation-->
+        <header class="header">
+            <div class="container nav-container">
+                <a href="#home" class="logo">NovaBrew</a>
+                
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="navbar" id="navbar">
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <!--constain trigger button-->
+                        <li><button class="btn-primary nav-btn" id="buy-now-btn">Buy Now</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!--Hero Section-->
+            <section class="hero" id="home">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <h1>Your Perfect Morning Brew </h1>
+                        <p>Wake up to the smell of freshly brewed coffee. NovaBrew syncs with your schedule to make your perfect cup, exactly when you need it.</p>
+                        <div class="hero-buttons">
+                            <a href="#pricing" class="btn-primary">Pre-Order Now</a>
+                            <a href="#features" class="btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/biji_kopi.jpeg" alt="NovaBrew Smart Coffee Maker">
+                    </div>
+                </div>
+            </section>
+
+            <!--Features Section-->
+            <section class="features" id="features">
+                <div class="container">
+                    <h2 class="section-title reveal">Why NovaBrew
+                        ?</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card reveal">
+                            <div class="icon">⏰</div>
+                            <h3>Smart Scheduling</h3>
+                            <p>Set your wake-up time in the app and wake up to a fresh pot ready to go.</p>
+                        </div>
+                        <div class="feature-card reveal">
+                            <div class="icon">📱</div>
+                            <h3>App Control</h3>
+                            <p>Adjust brew strength and temperature remotely from your smartphone.</p>
+                        </div>
+                        <div class="feature-card reveal">
+                            <div class="icon">♻️</div>
+                            <h3>Eco-Friendly</h3>
+                            <p>Reusable filter and energy-saving mode to reduce your carbon footprint.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Pricing Section-->
+            <section class="pricing" id="pricing">
+                <div class="container">
+                    <h2 class="section-title reveal">Choose Your Plan</h2>
+                    <div class="pricing-grid">
+                        <!--Basic Plan-->
+                        <div class="pricing-card reveal">
+                            <h3>Basic</h3>
+                            <p class="price">$199</p>
+                            <ul>
+                                <li>Smart Scheduling</li>
+                                <li>App Control</li>
+                                <li>Standard Filter</li>
+                            </ul>
+                            <button class="btn-primary buy-btn" data-plan="Basic">Pre-Order Basic</button>
+                        </div>
+                        <!--Pro Plan-->
+                        <div class="pricing-card reveal">
+                            <h3>Pro</h3>
+                            <p class="price">$299</p>
+                            <ul>
+                                <li>All Basic Features</li>
+                                <li>Eco-Friendly Mode</li>
+                                <li>Premium Reusable Filter</li>
+                            </ul>
+                            <button class="btn-primary buy-btn" data-plan="Pro">Pre-Order Pro</button>
+                        </div>
+                        <!--Ultimate Plan-->
+                        <div class="pricing-card reveal">
+                            <h3>Ultimate</h3>
+                            <p class="price">$399</p>
+                            <ul>
+                                <li>All Pro Features</li>
+                                <li>Lifetime Warranty</li>
+                                <li>VIP Support</li>
+                            </ul>
+                            <button class="btn-primary buy-btn" data-plan="Ultimate">Pre-Order Ultimate</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- form 1: choosen an package -->
+        <div class="modal-overlay" id="plan-selection-modal">
+            <div class="modal-content">
+                <button class="close-modal" id="close-plan-modal">&times;</button>
+                <h3>Select Your Plan</h3>
+                <p class="modal-subtitle">Choose the perfect NovaBrew for your needs.</p>
+                
+                <div class="modal-plan-list">
+                    <button class="modal-plan-btn" data-plan="Basic">
+                        <span>Basic</span>
+                        <span>$199</span>
+                    </button>
+                    <button class="modal-plan-btn" data-plan="Pro">
+                        <span>Pro</span>
+                        <span>$299</span>
+                    </button>
+                    <button class="modal-plan-btn" data-plan="Ultimate">
+                        <span>Ultimate</span>
+                        <span>$399</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- form 2: Pre-Order form -->
+        <div class="modal-overlay" id="preorder-modal">
+            <div class="modal-content">
+                <button class="close-modal" id="close-modal">&times;</button>
+                <h3>Complete Your Pre-Order</h3>
+                <p id="selectedPlanText" class="selected-plan-text">You are pre-ordering the Basic Plan.</p>
+                <form class="contact-form" id="orderForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="4" placeholder="Delivery Address / Message" required></textarea>
+                    <button type="submit" class="btn-primary">Submit Pre-Order</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Kusnadi. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
