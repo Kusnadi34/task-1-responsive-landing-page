@@ -3,7 +3,7 @@
 A modern, fully responsive landing page for a fictional smart coffee maker product called **NovaBrew**. This project was built as part of the Frontend Developer Internship program at Auspify Technologies.
 
 ## 🚀 Live Demo
-*(Tambahkan link Netlify/Vercel Anda di sini nanti, contoh: [Live Demo](https://novabrew-landing.netlify.app))* 
+*(Live Demo ((https://kusnadi34.github.io/task-1-responsive-landing-page/)))* 
 
 ## ✨ Features
 
